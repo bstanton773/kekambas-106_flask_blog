@@ -23,6 +23,9 @@ login.login_view = 'login'
 login.login_message = 'You must be logged in to perform this action'
 login.login_message_category = 'danger'
 
+# Import the api blueprint and register it with the Flask Application
+from app.blueprints.api import api
+app.register_blueprint(api)
 
 # import all of the routes from the routes file into the current folder
 from . import routes, models
